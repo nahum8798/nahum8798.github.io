@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- bibliotecas -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://kit.fontawesome.com/6cb324bf56.js" crossorigin="anonymous"></script>
+    <title>Comprar</title>
+</head>
+<body>
+    <!-- Encabezado (copiado de tu página principal) -->
+    <header>
+        <div class="logo">
+            <a href="main.html"><i class="fas fa-shopping-bag"></i></a>
+            <h1>ShopFree</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <!-- Barra de navegación (copiado de tu página principal) -->
+    <nav>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Celulares</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li class="align-right">
+                <a href="#" id="profile-link">Perfil <i class="fas fa-user"></i></a>
+                <!-- Opción "Cerrar Sesión" inicialmente oculta -->
+                <ul class="submenu" id="profile-submenu">
+                    <li><a href="login.html">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+            <li class="align-right"><a href="carrito.html">Carrito de Compras <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de los detalles del producto -->
+
+    <div class="details-container">
+        <h2>Detalles del Producto</h2>
+        <p>Producto: <span id="product-name"></span></p>
+        <p>Precio: $<span id="product-price"></span></p>
+
+        <!-- Formulario de compra -->
+        <div id="purchase-form" class="purchase-form">
+            <h2>Detalles de la Compra</h2>
+            <div class="product-details">
+                <p><strong>Producto:</strong> <span id="product-name"></span></p>
+                <p><strong>Precio por unidad:</strong> $<span id="unit-price"></span></p>
+            </div>
+            <hr>
+        
+            <form>
+                <div class="form-group">
+                    <label for="quantity">Cantidad:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+        
+                <div class="form-group">
+                    <label for="payment-method">Método de Pago:</label>
+                    <select id="payment-method" name="payment-method">
+                        <option value="credito">Tarjeta de Crédito</option>
+                        <option value="debito">Tarjeta de Débito</option>
+                    </select>
+                </div>
+        
+                <div id="card-number-field" class="form-group">
+                    <label for="card-number">Número de Tarjeta:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+        
+                <div class="form-group">
+                    <label for="address">Dirección de Envío:</label>
+                    <input type="text" id="address" name="address" placeholder="Calle, Ciudad, País">
+                </div>
+        
+                <div class="form-group">
+                    <label for="shipping-method">Método de Envío:</label>
+                    <select id="shipping-method" name="shipping-method">
+                        <option value="estandar">Envío Estándar</option>
+                        <option value="express">Envío Express</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="comments">Comentarios:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Agrega comentarios adicionales..."></textarea>
+                </div>
+            </form>
+        
+            <div class="total-price">
+                <p><strong>Total:</strong> $<span id="total-price">0.00</span></p>
+            </div>
+        
+            <button type="button" id="buy-button" class="buy-button">Finalizar Compra</button>
+        </div>
+        
+        
+    </div>
+   
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p>Copyright © 2023 FreeShop S.R.L.</p>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Cómo cuidamos tu privacidad</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Información al usuario financiero</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Defensa del Consumidor</a></li>
+                    <li><a href="#">Información sobre seguros</a></li>
+                </ul>
+            </div>
+        </div>
+        <address>
+            <p>Av. Falsa 123 - Springfield</p>
+        </address>
+    </footer>
+
+    <!-- Funcionalidad JavaScript para agregar productos al carrito -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const productName = localStorage.getItem('product');
+            const productPrice = localStorage.getItem('price');
+    
+            // Verifica si los datos del producto están disponibles en el Local Storage
+            if (productName && productPrice) {
+                document.getElementById('product-name').textContent = productName;
+                document.getElementById('product-price').textContent = productPrice;
+    
+                // Limpia los datos del producto almacenados en el Local Storage
+                localStorage.removeItem('product');
+                localStorage.removeItem('price');
+            }
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const productName = localStorage.getItem('product');
+    const productPrice = localStorage.getItem('price');
+
+    // Verifica si los datos del producto están disponibles en el Local Storage
+    if (productName && productPrice) {
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-price').textContent = productPrice;
+
+        // Limpia los datos del producto almacenados en el Local Storage
+        localStorage.removeItem('product');
+        localStorage.removeItem('price');
+    }
+
+    // Manejar la visibilidad del campo de número de tarjeta según el método de pago seleccionado
+    const paymentMethodField = document.getElementById('payment-method');
+    const cardNumberField = document.getElementById('card-number-field');
+
+    paymentMethodField.addEventListener('change', function () {
+        const selectedMethod = paymentMethodField.value;
+        if (selectedMethod === 'credito' || selectedMethod === 'debito') {
+            cardNumberField.style.display = 'block';
+        } else {
+            cardNumberField.style.display = 'none';
+        }
+    });
+
+    // Calcular el precio final al cambiar la cantidad
+    const quantityField = document.getElementById('quantity');
+    const priceElement = document.getElementById('product-price');
+
+    quantityField.addEventListener('input', function () {
+        const quantity = parseInt(quantityField.value);
+        const price = parseFloat(productPrice.replace('$', ''));
+        const totalPrice = (quantity * price).toFixed(2);
+        priceElement.textContent = `$${totalPrice}`;
+    });
+
+    // Mostrar una alerta de "Compra Finalizada" al hacer clic en el botón "Finalizar Compra"
+    const buyButton = document.getElementById('buy-button');
+
+    buyButton.addEventListener('click', function () {
+        alert('¡Compra Finalizada!');
+    });
+});
+// Espera a que el documento esté completamente cargado
+document.addEventListener('DOMContentLoaded', function () {
+        // Obtiene los elementos del menú
+        const profileLink = document.getElementById('profile-link');
+        const profileSubmenu = document.getElementById('profile-submenu');
+
+        // Agrega un manejador de eventos al enlace "Perfil" para mostrar/ocultar "Cerrar Sesión"
+        profileLink.addEventListener('click', function (e) {
+            e.preventDefault(); // Evita que el enlace "Perfil" navegue a otra página
+            profileSubmenu.classList.toggle('show'); // Muestra u oculta "Cerrar Sesión"
+        });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const productName = localStorage.getItem('product');
+    const productPrice = localStorage.getItem('price');
+
+    // Verifica si los datos del producto están disponibles en el Local Storage
+    if (productName && productPrice) {
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-price').textContent = productPrice;
+        document.getElementById('unit-price').textContent = productPrice; // Agregado
+
+        // Limpia los datos del producto almacenados en el Local Storage
+        localStorage.removeItem('product');
+        localStorage.removeItem('price');
+    }
+
+    // Manejar la visibilidad del campo de número de tarjeta según el método de pago seleccionado
+    const paymentMethodField = document.getElementById('payment-method');
+    const cardNumberField = document.getElementById('card-number-field');
+
+    paymentMethodField.addEventListener('change', function () {
+        const selectedMethod = paymentMethodField.value;
+        if (selectedMethod === 'credito' || selectedMethod === 'debito') {
+            cardNumberField.style.display = 'block';
+        } else {
+            cardNumberField.style.display = 'none';
+        }
+    });
+
+    // Calcular el precio total al cambiar la cantidad
+    const quantityField = document.getElementById('quantity');
+    const unitPriceElement = document.getElementById('unit-price');
+    const totalPriceElement = document.getElementById('total-price');
+
+    quantityField.addEventListener('input', function () {
+        const quantity = parseInt(quantityField.value);
+        const price = parseFloat(unitPriceElement.textContent.replace('$', '')); // Obtén el precio por unidad
+        const totalPrice = (quantity * price).toFixed(2);
+        totalPriceElement.textContent = `$${totalPrice}`;
+    });
+
+    // Mostrar una alerta de "Compra Finalizada" al hacer clic en el botón "Finalizar Compra"
+    const buyButton = document.getElementById('buy-button');
+
+    buyButton.addEventListener('click', function () {
+        alert('¡Compra Finalizada!');
+    });
+});
+
+
+    </script>
+     <!-- bibliotecas js -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>

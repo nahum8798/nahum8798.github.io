@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- bibliotecas -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://kit.fontawesome.com/6cb324bf56.js" crossorigin="anonymous"></script>
+    <title>Keycaps Set De Teclas Para Teclado Mecánico 104 Teclas Oem</title>
+</head>
+<body>
+    <!-- Encabezado (copiado de tu página principal) -->
+    <header>
+        <div class="logo">
+            <a href="main.html"><i class="fas fa-shopping-bag"></i></a>
+            <h1>ShopFree</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <!-- Barra de navegación (copiado de tu página principal) -->
+    <nav>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Celulares</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li class="align-right">
+                <a href="#" id="profile-link">Perfil <i class="fas fa-user"></i></a>
+                <!-- Opción "Cerrar Sesión" inicialmente oculta -->
+                <ul class="submenu" id="profile-submenu">
+                    <li><a href="index.html">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+            <li class="align-right"><a href="carrito.html">Carrito de Compras <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de los detalles del producto -->
+    <main class="main">
+        <div class="product-details-container">
+            <div class="product-details">
+                <h1 product-name>Keycaps Set De Teclas Para Teclado Mecánico 104 Teclas Oem</h1>
+                <img src="assets/images/car2/Keycaps Set De Teclas Para Teclado Mecánico 104 Teclas Oem.webp" alt="Producto 1">
+                <p>Descripción del producto. Aquí puedes incluir información detallada sobre el producto.</p>
+                <p product-price>Precio: $18.599</p>
+                <button id="comprar-button" data-product="Keycaps Set De Teclas Para Teclado Mecánico 104 Teclas Oem" data-price="18599"><a id="checkout-link" href="compra.html">Comprar</a></button>
+              
+
+
+            </div>  
+        </div>
+    </main>
+
+    <!-- Carrito de Compras (copiado de tu página principal) -->
+    
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p>Copyright © 2023 FreeShop S.R.L.</p>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Cómo cuidamos tu privacidad</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Información al usuario financiero</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Defensa del Consumidor</a></li>
+                    <li><a href="#">Información sobre seguros</a></li>
+                </ul>
+            </div>
+        </div>
+        <address>
+            <p>Av. Falsa 123 - Springfield</p>
+        </address>
+    </footer>
+    
+
+    <!-- Funcionalidad JavaScript para agregar productos al carrito (copiado de tu página principal) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const comprarButton = document.getElementById('comprar-button');
+            const checkoutLink = document.getElementById('checkout-link');
+    
+            comprarButton.addEventListener('click', function () {
+                const productName = comprarButton.getAttribute('data-product');
+                const productPrice = comprarButton.getAttribute('data-price');
+    
+                // Almacena los datos del producto en el Local Storage para que estén disponibles en la página de compra
+                localStorage.setItem('product', productName);
+                localStorage.setItem('price', productPrice);
+            });
+    
+            checkoutLink.addEventListener('click', function () {
+                // Redirige a la página de compra
+                window.location.href = 'compra.html';
+            });
+        });
+        // Espera a que el documento esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function () {
+        // Obtiene los elementos del menú
+        const profileLink = document.getElementById('profile-link');
+        const profileSubmenu = document.getElementById('profile-submenu');
+
+        // Agrega un manejador de eventos al enlace "Perfil" para mostrar/ocultar "Cerrar Sesión"
+        profileLink.addEventListener('click', function (e) {
+            e.preventDefault(); // Evita que el enlace "Perfil" navegue a otra página
+            profileSubmenu.classList.toggle('show'); // Muestra u oculta "Cerrar Sesión"
+        });
+        });
+    </script>
+     <!-- bibliotecas js -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

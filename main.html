@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- bibliotecas -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://kit.fontawesome.com/6cb324bf56.js" crossorigin="anonymous"></script>
+    <title>ShopFree</title>
+</head>
+<body>
+
+    <!-- encabezado -->
+
+    <header>
+        <div class="logo">
+            <a href="main.html"><i class="fas fa-shopping-bag"></i></a>
+            <h1>ShopFree</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+    </header>
+    
+
+    <!-- barra de navegación -->
+
+    <nav>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Celulares</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li class="align-right">
+                <a href="#" id="profile-link">Perfil <i class="fas fa-user"></i></a>
+                <!-- Opción "Cerrar Sesión" inicialmente oculta -->
+                <ul class="submenu" id="profile-submenu">
+                    <li><a href="index.html">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+            <li class="align-right"><a href="carrito.html">Carrito de Compras <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+    <!-- carousel principal -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div><img src="assets/images/car1/cyber.webp" alt="Imagen 1"></div>
+            <div><img src="assets/images/car1/ofertas.webp" alt="Imagen 2"></div>
+            <div><img src="assets/images/car1/samsung.webp" alt="Imagen 3"></div>
+        </div>
+    </div>    
+    <main class="main">
+        <h2>Métodos de pago</h2>
+        <section class="section metodos-de-pago">
+            <div class="card metodos-de-pago">
+                <i class="fas fa-credit-card"></i>
+                <p><a href="#">Tarjeta de crédito</a></p>
+            </div>
+            <div class="card metodos-de-pago">
+                <i class="fas fa-credit-card"></i>
+                <p><a href="#">Tarjeta de débito</a></p>
+            </div>
+            <div class="card metodos-de-pago">
+                <i class="fas fa-money-bill"></i>
+                <p><a href="#">Efectivo</a></p>
+            </div>
+        </section>
+
+        <!-- marcas -->
+
+        <section class="productos-mas-vendidos">
+            <h2>Trabajamos las siguientes marcas</h2>
+            <div class="product-carousel">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="assets/images/brands/Apple_logo_dark_grey.svg.png" alt="Producto 1">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="assets/images/brands/id9L7W04ae.png" alt="Producto 1">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="assets/images/brands/samsung-icon-2048x2048-1ej4ectz.png" alt="Producto 1">
+                    </a>            
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="assets/images/brands/Motorola_M_symbol_blue.svg.png" alt="Producto 1">
+                    </a>            
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="assets/images/brands/Xiaomi_logo_(2021-).svg.png" alt="Producto 1">
+                    </a>            
+                </div>
+            </div>
+        </section>
+
+        <!-- seccion mas vendidos -->
+        <section class="productos-mas-vendidos">
+            <h2>Más vendidos</h2>
+            <div class="product-carousel">
+                <div class="product-card">
+                    <a href="Xiaomi-Redmi-Note-11-4gb-Ram-128gb.html">
+                        <img src="assets/images/car2/Xiaomi-Redmi-Note-11-4gb-Ram-128gb.webp" alt="Producto 1">
+                        <h2>Xiaomi Redmi Note 11 4gb Ram 128gb</h2>
+                        <p>$132.998</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="Samsung-Galaxy-A14-5G-128-GB-silver-4-GB-RAM.html">
+                        <img src="assets/images/car2/Samsung-Galaxy-A14-5G-128-GB-silver-4-GB-RAM.webp" alt="Producto 1">
+                        <h2>Samsung Galaxy A14 5G 128 GB silver 4GB RAM</h2>
+                        <p>$152.999</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="Tcl-30-Se-Atlantic-Blue-Rva-Color-Azul.html">
+                        <img src="assets/images/car2/Tcl-30-Se-Atlantic-Blue-Rva-Color-Azul.webp" alt="Producto 1">
+                        <h2>Tcl 30 Se Atlantic Blue Rva Color Azul</h2>
+                        <p>$94.200</p>
+                    </a>
+                    
+                </div>
+                <div class="product-card">
+                    <a href="Notebook-Hp-Elitebook-840-G3-I5-8gb.html">
+                        <img src="assets/images/car2/Notebook-Hp-Elitebook-840-G3-I5-8gb .webp" alt="Producto 1">
+                        <h2>Notebook Hp Elitebook 840 G3 I5 8gb</h2>
+                        <p>$450.000</p>
+                    </a>   
+                </div>
+                <div class="product-card">
+                    <a href='Notebook-CX-26256-gris-15.6"-Intel-Celeron-N3350-4GB-de-RAM.html'>
+                        <img src="assets/images/car2/Notebook-Hp-Elitebook-840-G3-I5-8gb .webp" alt="Producto 1">
+                        <h2>Notebook CX 26256 gris 15.6", Intel Celeron N3350 4GB de RAM </h2>
+                        <p>$249.000</p>
+                    </a> 
+                </div>
+                <div class="product-card">
+                    <a href="NotebookHp4-dq0515la14IntelCeleronN41204gb256gb.html">
+                        <img src="assets/images/car2/Notebook Hp 14-dq0515la 14 Intel Celeron N4120 4gb 256gb.webp" alt="Producto 1">
+                        <h2>Notebook Hp 14-dq0515la 14 Intel Celeron N4120 4gb 256gb</h2>
+                        <p>$404.999</p>
+                    </a>   
+                </div>
+                <div class="product-card">
+                    <a href="TeclasTemáticas.html">
+                        <img src="assets/images/car2/Teclas Temáticas Del Programador Pbt, Perfil Xda, Tecla.webp" alt="Producto 1">
+                        <h2>Teclas Temáticas Del Programador Pbt, Perfil Xda, Tecla</h2>
+                        <p>$92.599</p>
+                    </a>  
+                </div>
+                <div class="product-card">
+                    <a href="KeycapsSetDeTeclasParaTecladoMecánico104TeclasOem.html">
+                        <img src="assets/images/car2/Keycaps Set De Teclas Para Teclado Mecánico 104 Teclas Oem.webp" alt="Producto 1">
+                        <h2>Keycaps Set De Teclas Para Teclado Mecánico 104 Teclas Oem</h2>
+                        <p>$18.599</p>
+                    </a> 
+                </div>
+                <div class="product-card">
+                    <a href="">
+                        <img src="assets/images/car2/Smartwatch Reloj Inteligente Smart Band Bluetooth Y68 D20.webp" alt="Producto 1">
+                        <h2>Smartwatch Reloj Inteligente Smart Band Bluetooth Y68 D20</h2>
+                        <p>$15.150</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="AuricularesBluetooth.html">
+                        <img src="assets/images/car2/Auriculares Bluetooth In-Ear Gamer F9-5 Negro Inalámbricos.webp" alt="Producto 1">
+                        <h2>Auriculares Bluetooth In-Ear Gamer F9-5 Negro Inalámbricos</h2>
+                        <p>$5.150</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- features -->
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Elegí cómo pagar</h3>
+                <p>Podés pagar con tarjeta, débito, efectivo</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-box"></i>
+                <h3>Envío gratis desde $10,000</h3>
+                <p>Solo por estar registrado tenés envíos gratis en miles de productos.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devolvelo! En ShopFree, no hay nada que no puedas hacer, porque estás siempre protegido.</p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p>Copyright © 2023 FreeShop S.R.L.</p>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Cómo cuidamos tu privacidad</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Información al usuario financiero</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Defensa del Consumidor</a></li>
+                    <li><a href="#">Información sobre seguros</a></li>
+                </ul>
+            </div>
+        </div>
+        <address>
+            <p>Av. Falsa 123 - Springfield</p>
+        </address>
+    </footer>
+    <button id="scroll-to-top">Volver arriba</button>
+    <script>
+        // Espera a que el documento esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function () {
+        // Obtiene los elementos del menú
+        const profileLink = document.getElementById('profile-link');
+        const profileSubmenu = document.getElementById('profile-submenu');
+
+        // Agrega un manejador de eventos al enlace "Perfil" para mostrar/ocultar "Cerrar Sesión"
+        profileLink.addEventListener('click', function (e) {
+            e.preventDefault(); // Evita que el enlace "Perfil" navegue a otra página
+            profileSubmenu.classList.toggle('show'); // Muestra u oculta "Cerrar Sesión"
+        });
+        });
+
+    </script>
+    <!-- bibliotecas js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- js -->
+    <script src="script.js"></script>
+</body>
+</html>

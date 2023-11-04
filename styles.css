@@ -1,0 +1,701 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c6c6c6;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+/* ------- encabezado ------------ */
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #fca311;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i,
+.logo h1 {
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 10px; /* Añade un margen entre el icono y el texto si es necesario */
+}
+
+
+
+
+/* --  barra de navegación --- */
+
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.align-right {
+    margin-left: auto; /* Alinea a la derecha */
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+}
+
+.submenu li {
+    display: block;
+}
+
+/* Estilos para el menú desplegable de "Cerrar Sesión" */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+}
+
+.submenu li {
+    display: block;
+}
+
+/* Estilos para mostrar el menú desplegable "Cerrar Sesión" */
+.show {
+    display: block;
+}
+
+/* ----- carousel principal ---------------- */
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.carousel {
+    display: flex;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slick-prev,
+.slick-next {
+    display: none;
+}
+
+.slick-slider {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* ---- seccion metodos de pago ------- */
+
+.section.metodos-de-pago {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+}
+.card.metodos-de-pago {
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    max-width: 250px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.card.metodos-de-pago a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* --- seccion mas vendidos ----- */
+
+.productos-mas-vendidos {
+    padding: 20px;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.product-card {
+    flex: 0 0 calc(20% - 20px);
+    margin-right: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1em;
+}
+
+.product-card a{
+    text-decoration: none;
+    color: #333;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1em;
+}
+
+
+/* --- login ----------- */
+
+/* Estilos para el formulario de inicio de sesión */
+.login-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form h2 {
+    font-size: 24px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+.login-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- productos ----------- */
+/* Descripción del producto */
+.product-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Botones */
+.buy-button, .add-to-cart-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.buy-button:hover, .add-to-cart-button:hover {
+    background-color: #0056b3;
+}
+
+/* ----------- carrito --------------------*/
+/* Título del carrito */
+.shopping-cart h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Lista de productos en el carrito */
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cart-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.cart-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cart-item p {
+    font-size: 16px;
+}
+
+/* Botón de pago */
+.checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de tarjetas */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature-card {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 1em;
+}
+
+.feature-card img {
+    max-width: 100px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.copyright {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+.links {
+    flex-basis: auto;
+    text-align: center;
+   
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.links li a{
+    text-decoration: none;
+    color:#fff;
+}
+
+
+/* boton volver arriba */
+
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilos para centrar el contenido del producto */
+.product-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra verticalmente el contenido en la página */
+    padding: 20px;
+    border-radius: 1em;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.product-details img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 1em;
+}
+
+
+#comprar-button{
+    background-color: #007bff;
+    padding: 0.5em;
+}
+
+#comprar-button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos específicos para la página de compra */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c6c6c6;
+}
+
+.details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#product-name,
+#product-price {
+    font-weight: bold;
+}
+
+form {
+    padding: 20px 0;
+}
+
+label {
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el formulario de compra */
+
+.purchase-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.purchase-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.purchase-form .form-group {
+    margin-bottom: 20px;
+}
+
+.purchase-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.purchase-form input,
+.purchase-form select,
+.purchase-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.purchase-form select {
+    cursor: pointer;
+}
+
+.purchase-form #card-number-field {
+    display: none;
+}
+
+.purchase-form .total-price {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.purchase-form #buy-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.purchase-form #buy-button:hover {
+    background-color: #0056b3;
+}
+
+
+.purchase-form label,
+.purchase-form input,
+.purchase-form select,
+.purchase-form textarea {
+    font-family: Arial, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+
+    /* barra de navegación */
+
+    .menu {
+        display: none;
+        flex-direction: column; /* Añade esta línea para mostrar los elementos en columna */
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu.open .submenu {
+        display: block;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+
+    /* encabezado */
+
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+
+    /* seccion metodos de pago */
+
+    .card.metodos-de-pago {
+        font-size: 16px;
+    }
+
+
+    /* mas vendidos */
+
+    .product-carousel {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .product-card {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    /* productos */
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* features */
+
+    @media (max-width: 768px) {
+        .feature-card {
+            width: 90%;
+        }
+    }
+
+
+    /* footer */
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .copyright, .links {
+        flex-basis: 100%;
+    }
+
+    .links li {
+        display: block;
+    }
+
+    /* detalle de producto */
+
+    .product-details {
+        max-width: 100%; /* Ajusta el ancho máximo para pantallas pequeñas */
+    }
+
+    /* formulario de compra */ 
+    .purchase-form {
+        max-width: 100%;
+    }
+
+}
